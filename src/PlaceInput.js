@@ -3,7 +3,7 @@ import "./SearchBar.css";
 
 function PlaceInput(props) {
   const [placeData, setPlaceData] = useState([""]);
-  const [placeQuery, setPlaceQuery] = useState("");
+  const [placeQuery, setPlaceQuery] = useState("US");
   const placeStrings = placeData.map(
     (place) => `${place.PlaceId} - ${place.PlaceName}`
   );

@@ -13,7 +13,7 @@ function DateInput(props) {
   //Make sure the return date input is the departure date or after
   useEffect(() => {
     props.header === "Return" && setDateInput(props.departureDate);
-  }, [props.departureDate]);
+  }, [props.departureDate, props.header]);
 
   return (
     <div className="input-container">

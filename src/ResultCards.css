@@ -1,0 +1,43 @@
+#result-cards-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#result-card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid rgb(114, 164, 211);
+  border-radius: 10px;
+  box-shadow: 1px 2px lightgray;
+  margin: 10px 0;
+  padding: 15px;
+}
+
+#result-card-container:hover {
+  background-color: rgb(231, 243, 250);
+}
+
+#outbound-info,
+#inbound-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+#price {
+  font-weight: bold;
+}
+
+#price-info {
+  text-align: center;
+  margin: 10px;
+}
+
+#no-result {
+  text-align: center;
+}

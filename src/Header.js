@@ -7,7 +7,7 @@ function Header() {
     <div id="header-container">
       <img id="header" src={flightSearchHeader} alt=""></img>
       <h3 id="header-text">Flight Search</h3>
-      <h4 id="header-slogan">Find your cheapest flight quote</h4>
+      <h4 id="header-slogan">Find your cheapest domestic flight quote</h4>
     </div>
   );
 }
