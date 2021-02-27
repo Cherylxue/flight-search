@@ -3,7 +3,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: white;
-  margin: 0 10%;
+  /* margin: 0 10%; */
+  width: 100%;
 }
 
 input {
