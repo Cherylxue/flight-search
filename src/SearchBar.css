@@ -1,0 +1,36 @@
+#search-bar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  margin: 0 10%;
+}
+
+input {
+  font-size: 1.4vw;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(243, 243, 243);
+  border: none;
+  height: 3vw;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgb(155, 210, 255);
+}
+
+input:hover {
+  border: 1px solid rgb(230, 229, 229);
+}
+
+#input-container {
+  justify-content: center;
+  border: 1px solid white;
+}
+
+.input-container p {
+  text-align: center;
+  margin: 10px;
+}

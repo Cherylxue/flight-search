@@ -1,0 +1,27 @@
+#header-container {
+  position: relative;
+}
+
+#header {
+  width: 80%;
+  margin-left: 10%;
+  position: inherit;
+}
+
+#header-text {
+  position: absolute;
+  font-size: 5vw;
+  color: white;
+  text-shadow: 1px 1px gray;
+  top: 4vw;
+  text-align: center;
+  width: 100%;
+}
+
+#header-slogan {
+  position: absolute;
+  font-size: 2vw;
+  color: white;
+  right: 30%;
+  top: 15vw;
+}
