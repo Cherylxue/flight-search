@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 function DateInput(props) {
   const [dateInput, setDateInput] = useState(props.today);
-  const [isValidDate, setIsValidDate] = useState(true);
 
   function handleChange(e) {
     const { value } = e.target;

@@ -2,13 +2,12 @@ import "./App.css";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
 import ResultCards from "./ResultCards";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function App() {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [inputValues, setInputValues] = useState({});
 
   //fetch markets
   // useEffect(() => {
@@ -37,7 +36,7 @@ function App() {
 
   function handleSubmit(inputValues) {
     const { originPlace, destPlace, departureDate, returnDate } = inputValues;
-    setInputValues(inputValues);
+
     setIsLoading(true);
     fetch(
       `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${originPlace}/${destPlace}/${departureDate}?inboundpartialdate=${returnDate}`,
@@ -52,6 +51,11 @@ function App() {
       }
     )
       .then((response) => {
+        if (response.status === 400) {
+          alert(
+            "No result for the current date. Please try to pick another date."
+          );
+        }
         response.json().then((response) => {
           setIsLoading(false);
           setData(response);
@@ -59,7 +63,7 @@ function App() {
         });
       })
       .catch((err) => {
-        console.error(err);
+        console.log(err);
       });
   }
   return (
